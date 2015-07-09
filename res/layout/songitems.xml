@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MusicListViewItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/text_gray" >
+
+        <ImageView
+            android:id="@+id/song_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:maxHeight="60dip"
+            android:maxWidth="60dip"
+            android:paddingLeft="8dip"
+            android:paddingTop="7dip"
+            android:src="@drawable/mp31" >
+        </ImageView>
+
+        <com.scu.mymusicplayer.view.ScrollForeverTextView
+            android:id="@+id/song_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/song_pic"
+            android:clickable="false"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingTop="20dip"
+            android:singleLine="true"
+            android:text="sad"
+            android:textColor="#000"
+            android:textIsSelectable="false"
+            android:textSize="20dip" >
+        </com.scu.mymusicplayer.view.ScrollForeverTextView>
+
+         <ImageButton
+             android:id="@+id/song_add"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_marginTop="10dp"
+             android:src="@drawable/base_action_bar_add_bg_selector" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

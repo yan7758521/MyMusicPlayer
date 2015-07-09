@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing_2" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <com.scu.mymusicplayer.view.ClearEditText
+        android:id="@+id/et_msg_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_action_bar_height"
+        android:layout_below="@id/common_actionbar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/base_edit_input"
+        android:drawableLeft="@drawable/icon_msg_search"
+        android:drawablePadding="10dp"
+        android:hint="@string/message_search_hint"
+        android:paddingLeft="25dp"
+        android:paddingRight="10dp"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:id="@+id/net_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_msg_search"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/contentMusicAll"
+        android:background="@drawable/beijing_3"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_paihang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="排行榜"
+            android:textSize="25sp" />
+
+        <com.scu.mymusicplayer.view.MyImageView
+            android:id="@+id/contentMusic1"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:layout_margin="2dp"
+            android:adjustViewBounds="true"
+            
+            android:scaleType="matrix"
+            android:src="@drawable/contenbar" />
+
+        <TextView
+            android:id="@+id/tv_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="歌手"
+            android:textSize="25sp" />
+
+        <com.scu.mymusicplayer.view.MyImageView
+            android:id="@+id/contentMusic2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            
+            android:scaleType="matrix"
+            android:src="@drawable/contenbar" />
+
+        <TextView
+            android:id="@+id/tv_gedan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="歌单"
+            android:textSize="25sp" />
+
+        <com.scu.mymusicplayer.view.MyImageView
+            android:id="@+id/contentMusic3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            
+            android:scaleType="matrix"
+            android:src="@drawable/contenbar" />
+    </LinearLayout>
+
+    <com.scu.mymusicplayer.view.MyImageView
+        android:id="@+id/contentMusicAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/net_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="2dp"
+        android:adjustViewBounds="true"
+        android:scaleType="matrix"
+        android:src="@drawable/contenbar2"
+         />
+
+    <TextView
+        android:id="@+id/tv_tuijian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contentMusicAll"
+        android:layout_alignLeft="@+id/contentMusicAll"
+        android:layout_alignRight="@+id/contentMusicAll"
+        android:layout_alignTop="@+id/net_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/beijing_3"
+        android:padding="10dp"
+        android:text="歌曲推荐"
+        android:textSize="30sp" />
+
+    <com.scu.mymusicplayer.view.MyImageView
+        android:id="@+id/contentMusic4"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contentMusic5"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/net_content"
+        android:layout_margin="2dp"
+        android:layout_toRightOf="@+id/contentMusicAll"
+        android:adjustViewBounds="true"
+        
+        android:scaleType="matrix"
+        android:src="@drawable/contenbar" />
+
+    <com.scu.mymusicplayer.view.MyImageView
+        android:id="@+id/contentMusic5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/contentMusicAll"
+        android:layout_below="@+id/net_content"
+        android:layout_margin="2dp"
+        android:adjustViewBounds="true"
+       
+        android:scaleType="matrix"
+        android:src="@drawable/contenbar" />
+
+</RelativeLayout>

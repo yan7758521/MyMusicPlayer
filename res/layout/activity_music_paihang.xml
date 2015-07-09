@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing_2" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+    
+    <ImageView 
+        android:id="@+id/img_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="400dp"
+        android:maxHeight="180dp"
+        android:src="@drawable/contenbar"
+        android:layout_below="@id/common_actionbar"
+        
+        />
+
+    <com.scu.mymusicplayer.view.ListBounceView
+        android:id="@+id/paihang_List"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/img_headline"
+        android:cacheColorHint="#00000000"
+        android:layout_marginTop="20dp"
+        android:dividerHeight="15dp" >
+    </com.scu.mymusicplayer.view.ListBounceView>
+    
+
+</RelativeLayout>

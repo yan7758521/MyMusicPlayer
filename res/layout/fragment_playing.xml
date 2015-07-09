@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing_2" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <ImageButton
+        android:id="@+id/name_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/common_actionbar"
+        android:layout_marginTop="8dip"
+        android:src="@drawable/base_action_bar_back_bg_selector" />
+
+    <LinearLayout
+        android:id="@+id/musicplaying_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/common_actionbar"
+        android:layout_marginTop="8dip"
+        android:layout_toRightOf="@id/name_back"
+        android:orientation="vertical" >
+
+        <com.scu.mymusicplayer.view.ScrollForeverTextView
+            android:id="@+id/musicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="14dip"
+            android:paddingRight="14dip"
+            android:singleLine="true"
+            android:text="sad"
+            android:textColor="#000"
+            android:textIsSelectable="false"
+            android:textSize="30dip" >
+        </com.scu.mymusicplayer.view.ScrollForeverTextView>
+
+        <TextView
+            android:id="@+id/singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dip"
+            android:paddingRight="14dip"
+            android:paddingTop="5dip"
+            android:text="sad"
+            android:textColor="#000"
+            android:textIsSelectable="false"
+            android:textSize="20dip" />
+    </LinearLayout>
+
+    <com.scu.mymusicplayer.view.LyricView 
+        android:id="@+id/audio_lrc"
+        android:layout_width="match_parent"
+        android:layout_below="@id/musicplaying_info"
+        android:maxHeight="250dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="250dp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/song_control"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dip"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:layout_below="@id/audio_lrc"
+        android:layout_marginTop="15dip" >
+
+        <ImageButton
+            android:id="@+id/left_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/left_song_1" />
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/play" />
+
+        <ImageButton
+            android:id="@+id/right_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/right_song_1" />
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/playback_seeker"
+        style="@android:attr/progressBarStyleHorizontal"
+        android:layout_width="300.0dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_control"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:focusable="false"
+        android:max="100"
+        android:maxHeight="20.0dip"
+        android:minHeight="20.0dip"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:progressDrawable="@drawable/playback_seekbar_style"
+        android:thumb="@drawable/playback_seekbar_thumb"
+        android:thumbOffset="5.0dip" >
+    </SeekBar>
+
+    <TextView
+        android:id="@+id/now_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/playback_seeker"
+        android:layout_below="@id/playback_seeker"
+        android:layout_marginBottom="10dip"
+        android:text="@string/now_time"
+        android:textColor="#000"
+        android:textSize="12dip" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/all_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/playback_seeker"
+        android:layout_below="@id/playback_seeker"
+        android:layout_marginBottom="10dip"
+        android:text="@string/all_time"
+        android:textColor="#000"
+        android:textSize="12dip" >
+    </TextView>
+
+</RelativeLayout>

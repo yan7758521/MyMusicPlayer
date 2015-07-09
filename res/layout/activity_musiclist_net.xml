@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing_2" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+    
+    <TextView 
+        android:id="@+id/searchResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/common_actionbar"
+        android:text="搜索结果："
+        android:textSize="25sp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <com.scu.mymusicplayer.view.ListBounceView
+        android:id="@+id/NetSong_List"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/searchResult"
+        android:cacheColorHint="#00000000"
+        android:layout_marginTop="20dp"
+        android:dividerHeight="20dp" >
+    </com.scu.mymusicplayer.view.ListBounceView>
+    
+
+</RelativeLayout>

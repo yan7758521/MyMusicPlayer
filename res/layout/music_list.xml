@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MusicListViewItem"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/alpha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e3e3e3"
+            android:paddingBottom="2dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="2dip"
+            android:textColor="@color/guide_color"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/mp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alpha"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:maxHeight="60dip"
+            android:maxWidth="60dip"
+            android:paddingLeft="8dip"
+            android:paddingTop="7dip"
+            android:src="@drawable/mp31" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/item_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alpha"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mp3"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingTop="20dip"
+            android:singleLine="true"
+            android:text="hah"
+            android:textColor="#000"
+            android:textIsSelectable="false"
+            android:textSize="20dip" >
+        </TextView>
+
+        <com.scu.mymusicplayer.view.ScrollForeverTextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alpha"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/item_singer"
+            android:clickable="false"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingTop="20dip"
+            android:singleLine="true"
+            android:text="sad"
+            android:textColor="#000"
+            android:textIsSelectable="false"
+            android:textSize="20dip" >
+        </com.scu.mymusicplayer.view.ScrollForeverTextView>
+
+        <TextView
+            android:id="@+id/itemText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_title"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingLeft="290dip"
+            android:text="00:00"
+            android:textColor="#000"
+            android:textIsSelectable="false"
+            android:textSize="14dip" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>
